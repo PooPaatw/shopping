@@ -1,0 +1,177 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: auto;
+  background: #ffffff;
+  position: absolute;
+}
+
+body {
+  font-family: "Noto Sans", Arial, sans-serif;
+  background-image: url("../image/login-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.frame-1 {
+  position: absolute;
+  width: 220px;
+  height: 46px;
+  left: calc(50% - 220px / 2);
+  top: calc(50% - 46px / 2);
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.select-selected {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 220px;
+  height: 46px;
+  padding: 3px;
+  background: #222222;
+  border: 3px solid #ccffff;
+  box-shadow: 0px 0px 5px 1px #00ccff, inset 0px 0px 10px #00ccff;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #333333;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 5px;
+  /* 添加圓角 */
+  overflow: hidden;
+  /* 確保內容不會超出圓角 */
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div {
+  color: #ffffff;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.select-items div:hover {
+  background-color: #444444;
+}
+
+.custom-select::after {
+  content: "\25BC";
+  font-size: 12px;
+  color: #ccffff;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.username-container {
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  height: 40px;
+  width: 174px;
+}
+
+.username {
+  width: 78px;
+  height: 20px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  /* 文字居中 */
+  display: flex;
+  justify-content: center;
+  /* 內容水平居中 */
+  align-items: center;
+  /* 內容垂直居中 */
+}
+
+.logout {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+
+  width: 220px;
+  height: 40px;
+
+  background: #222222;
+  border: 1px solid #595959;
+  border-radius: 5px;
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.logout-text {
+  width: 70px;
+  height: 20px;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  text-align: center;
+
+  color: #888888;
+}
+
+.rectangle {
+  position: absolute;
+  width: 1px;
+  left: calc(50% + 70px);
+  top: 3px;
+  bottom: 3px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.arrow-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* 移除原來的 .custom-select::after */
+.custom-select::after {
+  content: none;
+}

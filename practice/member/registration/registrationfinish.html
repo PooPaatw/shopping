@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Finish</title>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: auto;
+      }
+      body {
+        font-family: "Noto Sans", Arial, sans-serif;
+        background-image: url("../image/login-desktop.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .registration-wrapper {
+        position: absolute;
+        width: 760px;
+        height: 866px;
+        left: 580px;
+        top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 760px;
+        height: 526px;
+        background-color: rgba(0, 0, 0, 0.75);
+        padding: 50px 100px;
+        gap: 40px;
+        border-radius: 10px;
+        position: absolute;
+        margin-top: 150px;
+        left: 0px;
+        top: 200px;
+        background: rgba(0, 0, 0, 0.75);
+        border: 3px solid #007788;
+        border-radius: 10px;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 30px;
+        font-family: "Arial", sans-serif;
+      }
+
+      .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 40px;
+        gap: 10px;
+        position: absolute;
+        height: 70px;
+        top: 0px;
+        background: rgba(255, 255, 255, 0.3);
+        font-family: "Noto Sans", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 44px;
+        color: white;
+      }
+
+      .title-div {
+        position: absolute;
+        width: 760px;
+        height: 40px;
+        left: 0px;
+        top: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffdd00;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        line-height: 40px;
+      }
+
+      .title-line {
+        position: absolute;
+        display: flex;
+        top: 150px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        background-image: url("./image/register_light.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-top: 0px;
+        line-height: 40px;
+      }
+
+      .step {
+        position: absolute;
+        width: 600px;
+        height: 70px;
+        left: 80px;
+        top: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .number {
+        width: 420px;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .frame {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-weight: bold;
+      }
+
+      .frame-1 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: calc(40% - 50px / 2);
+        top: calc(50% - 50px / 2);
+        background: #000000;
+        border-radius: 50px;
+        font-size: 30px;
+        color: #999999;
+        line-height: 34px;
+        text-align: center;
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .frame-2 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        left: calc(60% - 70px / 2);
+        top: calc(50% - 70px / 2);
+        background: #007788;
+        border-radius: 50px;
+        font-size: 40px;
+        line-height: 46px;
+        color: white;
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .gradient-line {
+        position: absolute;
+        height: 3px;
+        left: 0px;
+        right: 0px;
+        top: calc(50% - 3px / 2 + 0.5px);
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.0001) 0%,
+          rgba(255, 255, 255, 0.3) 49.89%,
+          rgba(255, 255, 255, 0.0001) 100%
+        );
+      }
+
+      .scan-login {
+        width: 120px;
+        height: 36px;
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+
+      .confirm-button {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 30px;
+        gap: 10px;
+        width: 184px;
+        height: 50px;
+        background: linear-gradient(180deg, #666666 0%, #000000 100%);
+        border: 1px solid #888888;
+        box-shadow: inset 0px -1px 5px rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        color: #ffffff;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="registration-wrapper">
+      <div class="logo">Logo</div>
+      <div class="title-div">Free Registration</div>
+      <div class="title-line"></div>
+      <div class="step">
+        <div class="gradient-line"></div>
+        <div class="number">
+          <div class="frame frame-1">1</div>
+          <div class="frame frame-2">2</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="scan-login">註冊成功</div>
+        <div class="confirm-button" onclick="goToIndex()">Return Home</div>
+      </div>
+    </div>
+
+    <script>
+      function goToIndex() {
+        const PUBLIC_PORT = 3000; // 確保這與您的公共應用端口匹配
+        window.location.href = `http://localhost:${PUBLIC_PORT}/index/index.html`;
+      }
+    </script>
+  </body>
+</html>

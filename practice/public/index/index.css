@@ -1,0 +1,110 @@
+/* 首頁 */
+body {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+  background: #ffffff;
+}
+
+/* bg */
+.bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url("../image/login-desktop.png") no-repeat center center;
+  background-size: cover;
+}
+
+/* bg with gradient */
+.bg-gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(104, 186, 207, 0.2) 0%,
+    rgba(0, 66, 83, 0.2) 100%
+  );
+}
+
+/* index-bottom */
+.index-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 51.72%;
+  bottom: 0;
+  background-size: cover;
+}
+
+/* 登入前 */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 40px;
+  position: absolute;
+  width: 360px;
+  height: 38px;
+  left: calc(50% - 360px / 2);
+  top: calc(50% - 38px / 2);
+}
+
+/* login */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  gap: 10px;
+  width: 160px;
+  height: 38px;
+  background: linear-gradient(180deg, #ffdd00 0%, #ff7700 100%);
+  border: 1px solid #ffeeaa;
+  box-shadow: inset 0px -1px 5px 1px #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login span {
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+  text-shadow: 0px 0px 15px rgba(255, 234, 0, 0.4);
+}
+
+/* join now */
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  gap: 10px;
+  width: 160px;
+  height: 38px;
+  background: linear-gradient(180deg, #55eeff 0%, #0099aa 100%);
+  border: 1px solid #55eeff;
+  box-shadow: inset 0px -1px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register span {
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+  text-shadow: 0px 0px 15px rgba(0, 240, 255, 0.4);
+}

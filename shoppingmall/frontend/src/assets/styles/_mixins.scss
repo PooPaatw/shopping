@@ -1,0 +1,42 @@
+@use "sass:map";
+@use "sass:color";
+
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+);
+
+@mixin respond-to($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// src/assets/styles/_colors.scss
+$primary-color: #333;
+$secondary-color: #666;
+$background-color: #f8f8f8;
+$hover-color: #000;
+
+// src/assets/styles/_variables.scss
+@forward "mixins";
+@forward "colors";
+
+// src/assets/styles/main.scss
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: $primary-color;
+}

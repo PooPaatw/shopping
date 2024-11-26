@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+       <form action="/login" id="loginForm" class="login-form">
+      <div class="title">Log In</div>
+      <div class="input-block">
+        <div class="input-title">Username</div>
+        <input
+          type="text"
+          class="input-field"
+          placeholder="Please enter username."
+          id="username"
+          name="username"
+          required
+        />
+      </div>
+      <div class="input-block">
+        <div class="input-title">Password</div>
+        <input
+          type="password"
+          class="input-field"
+          placeholder="Please enter password."
+          id="password"
+          name="password"
+          required
+        />
+      </div>
+      <div class="verification-code">
+        <div class="input-title">Verification Code</div>
+        <div class="verification-code-row">
+          <input
+            type="text"
+            class="verification-code-input"
+            placeholder="Verification Code."
+            id="verificationCode"
+          />
+          <div class="verification-code-display">2678</div>
+        </div>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" class="checkbox" id="rememberMe" />
+        <label for="rememberMe" class="checkbox-label">Remember me</label>
+      </div>
+      <button type="submit" class="login-button" id="loginButton">Login</button>
+      <div class="close-button" id="closeButton"></div>
+    </div>
+    </form>
+    <script src="./login.js"></script>
+  </body>
+</html>

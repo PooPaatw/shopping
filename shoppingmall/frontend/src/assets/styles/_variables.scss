@@ -1,0 +1,82 @@
+// Breakpoints
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+);
+
+// Spacing
+$container-padding: 1rem;
+$section-spacing: 2rem;
+$grid-gap: 1rem;
+
+// Colors
+$primary-color: #333;
+$secondary-color: #666;
+$background-color: #f8f8f8;
+$hover-color: #000;
+$white: #fff;
+$gray-100: #f8f8f8;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+// Typography
+$font-family-base: Arial, sans-serif;
+$font-size-base: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-sm: 0.875rem;
+$line-height-base: 1.5;
+
+// Borders
+$border-radius: 8px;
+$border-radius-lg: 12px;
+$border-radius-sm: 4px;
+
+// Shadows
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+// Z-index
+$z-index-header: 1000;
+$z-index-modal: 2000;
+$z-index-tooltip: 3000;
+
+// Transitions
+$transition-base: all 0.3s ease;
+$transition-fast: all 0.15s ease;
+$transition-slow: all 0.5s ease;
+
+// Container
+$container-max-width: 1200px;
+$container-padding: 1rem;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

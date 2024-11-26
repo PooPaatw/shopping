@@ -1,0 +1,11 @@
+
+
+# 忽略 config 目錄下的 database.js 檔案
+# backend/config/database.js
+
+# backend/node_modules
+
+*.member.sql
+
+node_modules
+.env

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="loginafter.css" />
+    <title>登入後</title>
+    <script>
+      // 立即隱藏頁面內容
+      document.documentElement.style.display = "none";
+      document.addEventListener("DOMContentLoaded", function () {
+        // 在 DOMContentLoaded 事件中檢查登入狀態
+        // 如果登入成功，再顯示頁面內容
+        fetch("/api/user-info", {
+          method: "GET",
+          credentials: "include",
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("用戶未登入");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            // 登入成功，顯示頁面內容
+            document.documentElement.style.display = "";
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("請登入。");
+            window.location.href = "../login/login.html?redirected=true";
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="frame-1">
+        <div class="custom-select">
+          <div class="select-selected">
+            <div class="username-container">
+              <div class="username"><!-- 用戶名將在這裡顯示 --></div>
+              <div class="rectangle"></div>
+              <svg
+                class="arrow-icon"
+                width="17"
+                height="10"
+                viewBox="0 0 17 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 2L8.5 8L15 2"
+                  stroke="#FFDD00"
+                  stroke-width="3"
+                  stroke-linecap="square"
+                  stroke-linejoin="square"
+                />
+              </svg>
+            </div>
+            <div class="rectangle"></div>
+          </div>
+          <div class="select-items select-hide">
+            <div data-value="logout" class="logout">
+              <span class="logout-text">Log Out</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="./loginafter.js"></script>
+  </body>
+</html>
