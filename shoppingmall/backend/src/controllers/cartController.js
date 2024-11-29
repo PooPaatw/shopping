@@ -24,7 +24,7 @@ const getCart = async (req, res) => {
         modelname: item.modelname,
         price: parseFloat(item.price),
         stock_quantity: parseInt(item.stock_quantity, 10),
-        image_url: item.image_url ? `/api${item.image_url}` : null,
+        image_url: item.image_url,
       })),
     });
   } catch (error) {
